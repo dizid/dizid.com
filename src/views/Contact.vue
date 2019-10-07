@@ -104,24 +104,23 @@ export default {
   this.uiState = "submit clicked";
   if (this.errors === false && this.formTouched === false) {
     //this is where you send the responses
-/* var bodyFormData = new FormData();
-bodyFormData.set('email', this.formResponses.email)
-bodyFormData.set('name', this.formResponses.name)
-bodyFormData.set('comment', this.formResponses.comment) */
 axios({
     method: 'post',
   // url: 'http://localhost:4000/sendmail',
  // url: 'https://apiforms.neffen.now.sh/sendmail', // PROD at Zeit
-  url: 'https://musing-easley-02ba23.netlify.com/sendmail', // PROD at Netlify
+//  url: 'https://musing-easley-02ba23.netlify.com/sendmail', // PROD at Netlify
+// url: 'http://localhost:8888/sendmail', // Netlify CLI DEV server
+  url: 'http://localhost:9000/.netlify/functions/sendmail', // Netlify-lambda DEV server
+    headers: {'Content-Type': 'application/json'},
     data: this.formResponses
     })
     .then(function (response) {
         //handle success
-        console.log("MF succeshandler: ", response)
+        console.log("MF succeshandler: ", response + "hiya: succes")
     })
     .catch(function (response) {
         //handle error
-        console.log("MF errorhandler: ", response)
+        console.log("MF errorhandler: ", response + " hiya: feil")
     });
      
     this.uiState = "form submitted"
