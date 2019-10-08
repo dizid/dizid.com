@@ -1,8 +1,4 @@
 <template>
-
-<!-- How to integrate vue forms with netlify: 
-https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/ -->
-
   <div class="columns" id="app">
   <div class="column is-two-thirds">
     <section class="section">
@@ -11,8 +7,7 @@ https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-
         I will reply as soon as possible.
       </p>
       <hr>
-      <!-- form starts here -->
-      <section class="form">
+       <section class="form">
         <form name="contactdizidcom" data-netlify="true">
           <div class="field">
             <label class="label">Name</label>
@@ -21,11 +16,9 @@ https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-
           <p v-if="errors" class="has-text-danger">
  <p v-if="!$v.formResponses.name.required">this field is required</p>
 <p v-if="!$v.formResponses.name.minLength">Field must have at least {{ $v.formResponses.name.$params.minLength.min }} characters.</p>
-      
             </div>
             </div>
-
-          <div class="field">
+           <div class="field">
             <label class="label">Message</label>
             <div class="control">
               <textarea v-model="$v.formResponses.message.$model" name="message" type="textarea" class="textarea" placeholder="Your message"  ></textarea>
@@ -41,10 +34,8 @@ https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-
 
           <div class="field is-grouped">
             <div class="control">
-              <!-- <button class="button is-primary">Submit</button> -->
-  <section>
+        <section>
   <button @click.prevent="submitForm" type="submit" class="submit">Submit</button>
-  <!-- <button type="submit" class="button">Submit</button> -->
   <p v-if="errors" class="error">The form above has errors,
     <br>please get your act together and resubmit
   </p>
@@ -53,22 +44,17 @@ https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-
   </p>
   <p v-else-if="uiState === 'form submitted'" class="success">Hooray! Your form was submitted!</p>
 </section>
-
-            </div>
+      </div>
           </div>
         </form>
-
       </section>
     </section>
   </div>
-
 </div>
 </template>
-
 <script>
 import { required, minLength } from 'vuelidate/lib/validators'
 import axios from 'axios'
-
 export default {
  data() {
    return {
@@ -106,26 +92,19 @@ export default {
     //this is where you send the responses
 axios({
     method: 'post',
-  // url: 'http://localhost:4000/sendmail',
- // url: 'https://apiforms.neffen.now.sh/sendmail', // PROD at Zeit
-//  url: 'https://musing-easley-02ba23.netlify.com/sendmail', // PROD at Netlify
-// url: 'http://localhost:8888/sendmail', // Netlify CLI DEV server
-  url: 'http://localhost:9000/.netlify/functions/sendmail', // Netlify-lambda DEV server
-    headers: {'Content-Type': 'application/json'},
-    data: this.formResponses
-    })
-    .then(function (response) {
-        //handle success
-        console.log("MF succeshandler: ", response + "hiya: succes")
-    })
-    .catch(function (response) {
-        //handle error
-        console.log("MF errorhandler: ", response + " hiya: feil")
+      url: 'https://musing-easley-02ba23.netlify.com/sendmail', // PROD at Netlify
+  //  headers: {'Content-Type': 'application/json'},
+      data: JSON.stringify(this.formResponses)
+      })
+        .then(function (response) { //handle success
+          console.log("MF succeshandler: ", response + "hiya: succes")
+      })
+        .catch(function (response) { //handle error
+          console.log("MF errorhandler: ", response + " hiya: feil")
     });
-     
     this.uiState = "form submitted"
   }
 }
- }
+}
 }
 </script>
