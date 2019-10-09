@@ -1,5 +1,7 @@
 # dizid
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/67de6a8a-2b1e-4daa-a744-675b7538ed7d/deploy-status)](https://app.netlify.com/sites/pensive-franklin-206069/deploys)
+
 ## Project setup
 ```
 npm install

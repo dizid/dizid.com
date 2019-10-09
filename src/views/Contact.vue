@@ -92,9 +92,8 @@ export default {
     //this is where you send the responses
 axios({
     method: 'post',
-      url: 'https://musing-easley-02ba23.netlify.com/sendmail', // PROD at Netlify
-  //  headers: {'Content-Type': 'application/json'},
-      data: JSON.stringify(this.formResponses)
+    url: 'https://musing-easley-02ba23.netlify.com/sendformdata', // PROD at Netlify
+    data: this.formResponses
       })
         .then(function (response) { //handle success
           console.log("MF succeshandler: ", response + "hiya: succes")
