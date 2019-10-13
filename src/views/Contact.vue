@@ -103,8 +103,8 @@ export default {
 axios({
     method: 'post',
   url: 'https://musing-easley-02ba23.netlify.com/sendformdata', // PROD at Netlify
-  // url: 'http://localhost:9000/.netlify/functions/sendformdata', //  Netlify-lambda DEV server
-    data: this.formResponses
+  //url: 'http://localhost:9000/.netlify/functions/sendformdata', //  Netlify-lambda DEV server
+    data: JSON.stringify(this.formResponses)
       })
         .then(function (response) { //handle success
           console.log("MF succeshandler: ", response + "hiya: succes")
