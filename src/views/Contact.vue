@@ -102,8 +102,8 @@ export default {
     //this is where you send the responses
 axios({
     method: 'post',
-  //  url: 'https://musing-easley-02ba23.netlify.com/sendformdata', // PROD at Netlify
-  url: 'http://localhost:9000/.netlify/functions/sendformdata', //  Netlify-lambda DEV server
+  url: 'https://musing-easley-02ba23.netlify.com/sendformdata', // PROD at Netlify
+  // url: 'http://localhost:9000/.netlify/functions/sendformdata', //  Netlify-lambda DEV server
     data: this.formResponses
       })
         .then(function (response) { //handle success
