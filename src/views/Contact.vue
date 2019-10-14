@@ -107,7 +107,7 @@ axios({
     data: JSON.stringify(this.formResponses)
       })
         .then(function (response) { //handle success
-          console.log("MF succeshandler: ", response + "hiya: succes")
+          console.log("MF succeshandler:  ", response)
       })
         .catch(function (response) { //handle error
           console.log("MF errorhandler: ", response + " hiya: feil")
