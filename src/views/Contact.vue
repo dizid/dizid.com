@@ -102,15 +102,15 @@ export default {
     //this is where you send the responses
 axios({
     method: 'post',
-  url: 'https://musing-easley-02ba23.netlify.com/.netlify/functions/sendformdata', // PROD at Netlify
-  // url: 'http://localhost:9000/.netlify/functions/sendformdata', //  Netlify-lambda DEV server
+  url: 'https://sendformdata.dizid.com/.netlify/functions/sendformdata', // PROD at Netlify
+ // url: 'http://localhost:9000/.netlify/functions/sendformdata', //  Netlify-lambda DEV server
     data: JSON.stringify(this.formResponses)
       })
         .then(function (response) { //handle success
           console.log("MF succeshandler:  ", response)
       })
         .catch(function (response) { //handle error
-          console.log("MF errorhandler: ", response + " hiya: feil")
+          console.log("MF errorhandler: ", response)
     });
     this.uiState = "form submitted"
   }
