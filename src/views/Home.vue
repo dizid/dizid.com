@@ -23,8 +23,6 @@ Need a digital project done or want to buy interesting, cold-hardy perennial veg
 <p>
  <router-link to="/contact" class="button is-primary">Contact me..</router-link>
 </p>
-
-
 			</div>
 			<a href="https://www.facebook.com/marcderuyter33" class="button is-medium is-facebook" style="width: 50px;"><i class="fab fa-facebook-f"></i></a>
 			<a href="https://twitter.com/dizid" class="button is-medium is-twitter" style="width: 50px;"><i class="fab fa-twitter"></i></a>
