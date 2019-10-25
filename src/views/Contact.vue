@@ -2,7 +2,7 @@
   <div class="columns" id="app">
   <div class="column is-two-thirds">
     <section class="section">
-      <h1 class="title">Contact me</h1>
+      <h1 class="title">Lets connect</h1>
       <p class="subtitle">
         I will reply as soon as possible.
       </p>
