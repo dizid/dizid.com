@@ -21,7 +21,7 @@ mostly perennials which you can view <router-link to="/plantlist"> here </router
 I also planted 120 berry bushes for a 'fruitful future' 🙂
 </p>
 <p>
-Need a digital project done or want to buy interesting, cold-hardy perennial vegetable plants?
+Need a digital project done? get in touch..
 </p>
 <p>
  <router-link to="/contact" class="button is-primary">Contact me..</router-link>
