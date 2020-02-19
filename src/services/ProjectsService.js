@@ -1,5 +1,4 @@
 import axios from 'axios'
-// https://api.airtable.com/v0/app6LeXwbRvapHbBw/Table%201?api_key=YOUR_API_KEY
 const Axios = axios.create({
   baseURL: "https://api.airtable.com/v0/app6LeXwbRvapHbBw/Projects"
 });

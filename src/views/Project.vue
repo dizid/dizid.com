@@ -17,8 +17,8 @@
                 <div class="columns">
                     <div class="column is-two-thirds">
                         <vue-simple-markdown :source="project.body"></vue-simple-markdown>
-                          <div v-for="(url, idx) in project.urls" v-bind:key="idx">
-                    <a :href="url">{{url}}</a> 
+                          <div>
+                    <a :href="project.url">{{project.url}}</a> 
                     </div>
                     </div>
                   
