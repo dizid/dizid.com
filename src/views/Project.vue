@@ -17,10 +17,11 @@
                 <div class="columns">
                     <div class="column is-two-thirds">
                         <vue-simple-markdown :source="project.body"></vue-simple-markdown>
-                    </div>
-                    <div>
+                          <div>
                     <a href="{{project.url}}">{{project.url}}</a>
                     </div>
+                    </div>
+                  
                     <div class="column is-one-third">
                         <div class="columns is-multiline">
                             <div class="column is-full" v-for="(image, idx) in project.images" v-bind:key="idx">
