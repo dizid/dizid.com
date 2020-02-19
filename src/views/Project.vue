@@ -19,7 +19,7 @@
                         <vue-simple-markdown :source="project.body"></vue-simple-markdown>
                     </div>
                     <div>
-                    <a href="{{project.url}}>{{project.url}}</a>
+                    <a href="{{project.url}}">{{project.url}}</a>
                     </div>
                     <div class="column is-one-third">
                         <div class="columns is-multiline">
