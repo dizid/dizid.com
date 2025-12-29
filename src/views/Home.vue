@@ -1,42 +1,29 @@
-<template> 
-  <div>
-	<div class="tile is-6 is-parent" id="left">
-		<article class="tile is-child pink post">
-			<p class="title is-2">Hi, I'm Marc de Ruijter. </p>
-			<p class="subtitle has-text-grey">In the summer months <router-link to="/plantlist">
-           i grow plants
-          </router-link><br> 
-   The rest of the year   <router-link to="/projects">
-           i develop apps
-          </router-link> mainly with Vue.js</p>
-			<div class="content has-text-grey">
-				<p>
-			The long, dark and cold Norwegian winters are excellent for study. No-SQL cloud databases, like Firebase, serverless computing, Vue, node and API's are big changes from the 90's when I first created a database web app with Visual Basic.
-Some of my recent projects you can see <router-link to="/projects">here</router-link>
-</p>
-<p>
-When spring comes, some of the perennial vegetables, like ramsons, rhubarb and St.Jansløk are popping up. 
-These are the signs that the growing season is starting and I grow more than 40 different vegetables, 
-mostly perennials which you can view <router-link to="/plantlist"> here </router-link>. 
-I also planted 120 berry bushes for a 'fruitful future' 🙂
-</p>
-<p>
-Need a digital project done? get in touch..
-</p>
-<p>
- <router-link to="/contact" class="button is-primary">Contact me..</router-link>
-</p>
-			</div>
-			<a href="https://www.facebook.com/marcderuyter33" class="button is-medium is-facebook" style="width: 50px;"><i class="fab fa-facebook-f"></i></a>
-			<a href="https://twitter.com/dizid" class="button is-medium is-twitter" style="width: 50px;"><i class="fab fa-twitter"></i></a>
-			<a href="https://github.com/dizid" class="button is-medium is-github" style="width: 50px;"><i class="fab fa-github"></i></a>
-			<a href="https://www.linkedin.com/in/dizid/" class="button is-medium is-linkedin" style="width: 50px;"><i class="fab fa-linkedin-in"></i></a>
-		</article>
-	</div>
-	<div class="tile is-6 is-parent" id="right">
-		
-	</div>
-	
+<template>
+  <div class="hero-wrapper">
+    <section class="hero is-fullheight hero-gradient">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-2 has-text-white">
+            Crafting exceptional web experiences<br>
+            with modern technologies
+          </h1>
+          <h2 class="subtitle is-4 hero-subtitle">
+            Web Developer since HTML 1.0 | Building the web for over two decades
+          </h2>
+          <div class="buttons is-centered hero-buttons">
+            <router-link to="/projects" class="button is-large is-light">
+              View My Work
+            </router-link>
+            <router-link to="/contact" class="button is-large is-primary is-dark-purple">
+              Get In Touch
+            </router-link>
+          </div>
+          <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -50,58 +37,63 @@ export default {
 </script>
 
 <style scoped>
-  .column {
-    display: flex;
+  .hero-wrapper {
+    min-height: 100vh;
   }
 
-  .image {
-    background-position: center center;
-    background-size: cover;
-    height: 400px;
-    position: relative;
+  .hero-gradient {
+    background: linear-gradient(135deg, #2c2c54 0%, #474787 50%, #706fd3 100%);
   }
 
-  #left {
-    padding: 7%;
+  .hero-subtitle {
+    color: #9b59b6;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 
-  #right {
-    /* background-image: url("https://drive.google.com/file/d/1879YhlRVtcf3vnh5Uj1vyiVANzp4g_T-"); */
-    background-image: url("../assets/marc-en-leon.jpg");
-  } 
+  .hero-buttons {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 
-  html {
-    overflow-y:hidden;
-    }
+  .hero-buttons .button {
+    margin: 0.5rem;
+    min-width: 200px;
+    border-radius: 4px;
+  }
 
-    .columns {
-      margin-top: 0;
-    }
+  .button.is-light {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2c2c54;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+  }
 
-    #right {
-      width: 100%;
-      height:100%;
-    }
+  .button.is-dark-purple {
+    background-color: #3d3d6b;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
 
-    @media (min-width: 769px) {
-      #right {
-        width: 50%;
-      }
-    }
+  .button.is-dark-purple:hover {
+    background-color: #4a4a7a;
+  }
 
-    #right {
-      background-position: center center;
-      background-size: cover;
-      height: 400px;
-      position: relative;
-    }
+  .scroll-indicator {
+    margin-top: 3rem;
+    color: white;
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+  }
 
-    @media (min-width: 769px) {
-      #right {
-        height: 100vh;
-        position: fixed;
-        right: 0;
-        top: 0;
-      }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
     }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
 </style>
