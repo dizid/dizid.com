@@ -16,7 +16,7 @@
     "dotenv": "^8.1.0",
     "vue-simple-markdown": "^1.0.9",
     "node-sass": "^4.12.0",
-    "sass-loader": "^7.0.0",
+    "sass-loader": "^9.0.0",
     "vuejs-smart-table": "0.0.5"
   },
   "devDependencies": {
